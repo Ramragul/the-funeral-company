@@ -581,12 +581,12 @@ export const CoffinDetailPage: React.FC = () => {
 
             {/* Dates */}
             <Box>
-              <Text fontWeight="medium">Delivery Date</Text>
+              <Text fontWeight="medium">Expected Delivery Date</Text>
               <Input type="date" value={deliveryDate} onChange={(e) => setDeliveryDate(e.target.value)} />
             </Box>
 
             <Box>
-              <Text fontWeight="medium">Collection/Return Date</Text>
+              <Text fontWeight="medium">Event Date</Text>
               <Input type="date" value={collectionDate} onChange={(e) => setCollectionDate(e.target.value)} />
             </Box>
 

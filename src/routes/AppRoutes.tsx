@@ -49,7 +49,7 @@ export default function AppRoutes() {
         <Route path="admin/grounds" element={<GroundManagerPage/>} />
         <Route path="admin/grounds/edit/:id" element={<GroundEditPage/>} />
         <Route path="grounds/:id" element={<GroundDetailsPage/>} />
-        <Route path="grounds" element={<GroundsListPage/>} />
+        <Route path="services/funeralground" element={<GroundsListPage/>} />
 
         {/* <Route path="/services" element={<Services />} /> */}
         <Route path="/services/category/:category" element={<ServiceCategory />} />
