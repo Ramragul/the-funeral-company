@@ -246,7 +246,7 @@ if (loading) {
         ))}
 
         {/* Special card for Customised Coffin */}
-        <GridItem
+        {/* <GridItem
           borderWidth="2px"
           borderStyle="dashed"
           borderRadius="lg"
@@ -262,7 +262,7 @@ if (loading) {
             <Text fontSize="sm" color="gray.600">Design your own coffin with fabric, engravings, and personal touches.</Text>
             <Button colorScheme="brand">Start Customising</Button>
           </Stack>
-        </GridItem>
+        </GridItem> */}
       </Grid>
     </Box>
   );
