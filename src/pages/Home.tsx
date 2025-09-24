@@ -384,7 +384,7 @@ export default function Home() {
       <Box bgGradient="linear(to-b, white, brand.50)" py={{ base: 12, md: 20 }}>
         <Container maxW="6xl" textAlign="center">
           <Heading as="h1" size="2xl" color="brand.600" mb={4}>
-            Technology-powered Funeral Services
+            Technology-Powered Funeral Services
           </Heading>
           <Text fontSize="lg" color="gray.600" mb={8}>
             100% professional care, dignity, and support for every family.
