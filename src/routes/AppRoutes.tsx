@@ -25,6 +25,11 @@ import ServicesCatalog from "../pages/ServicesCatalog";
 import ServiceCategory from "../pages/ServiceCategory";
 import ServiceDetail from "../pages/ServiceDetail";
 import AdminServiceUpload from "../pages/AdminServiceUpload";
+import AdminHomePage from "../pages/AdminHomePage";
+import VendorPaymentsPage from "../pages/VendorPaymentsPage";
+import VendorDetailsPage from "../pages/VendorDetailsPage";
+import VendorListPage from "../pages/VendorListPage";
+import VendorFormModal from "../pages/VendorFormModal";
 
 export default function AppRoutes() {
   return (
@@ -51,10 +56,17 @@ export default function AppRoutes() {
         <Route path="grounds/:id" element={<GroundDetailsPage/>} />
         <Route path="services/funeralground" element={<GroundsListPage/>} />
 
+        <Route path="/vendors" element={<VendorListPage />} />
+        <Route path="/vendors/:id" element={<VendorDetailsPage />} />
+        <Route path="/vendors/payments" element={<VendorPaymentsPage />} />
+
         {/* <Route path="/services" element={<Services />} /> */}
         <Route path="/services/category/:category" element={<ServiceCategory />} />
         <Route path="/services/:code" element={<ServiceDetail />} />
         <Route path="/admin/service/upload" element={<AdminServiceUpload />} />
+
+        <Route path="/admin" element={<AdminHomePage />} />
+
 
 
 
