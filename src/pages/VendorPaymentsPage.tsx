@@ -38,7 +38,7 @@ import {
     useEffect(() => {
       setLoading(true);
       axios
-        .get("/api/tfc/vendor-payments")
+        .get("https://admee.in:3003/api/tfc/vendor-payments")
         .then((res) => setPayments(res.data))
         .catch((err) => console.error(err))
         .finally(() => setLoading(false));

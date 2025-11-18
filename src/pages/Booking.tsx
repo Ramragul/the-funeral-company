@@ -609,6 +609,7 @@ import {
   Button, useToast, SimpleGrid, HStack, NumberInput,
   NumberInputField, NumberInputStepper, NumberIncrementStepper,
   NumberDecrementStepper, Badge, Stack,
+  Select,
 } from "@chakra-ui/react";
 import { useSearchParams, useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
@@ -778,13 +779,18 @@ export default function Booking() {
         customer: { name: formData.name, phone: formData.phone, email: formData.email },
         serviceDate: formData.date,
         address: formData.address || null,
+        city : formData.city || null,
+        pincode : formData.pincode || null,
         pickupLocation: formData.pickup || null,
         dropLocation: formData.drop || null,
         notes: formData.notes,
+       
+        
       };
 
       if (formData.package) {
         payload.packageCode = formData.package;
+       
       } else if (selectedServices.length) {
         payload.services = selectedServices.map((s) => ({
           code: s.code, // base code
@@ -831,6 +837,31 @@ export default function Booking() {
             <FormControl isRequired>
               <FormLabel>Address</FormLabel>
               <Textarea value={formData.address} onChange={(e) => setFormData({ ...formData, address: e.target.value })} />
+            </FormControl>
+            <FormControl isRequired>
+              
+            <FormLabel>City</FormLabel>
+            <Select
+              placeholder="Select City"
+              value={formData.city}
+              onChange={(e) => setFormData({ ...formData, city: e.target.value })}
+            >
+              <option value="Chennai">Chennai</option>
+              <option value="Bengaluru">Bengaluru</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Kolkata">Kolkata</option>
+              <option value="Pune">Pune</option>
+              <option value="Coimbatore">Coimbatore</option>
+              <option value="Trichy">Trichy</option>
+            </Select>
+          </FormControl>
+
+
+            <FormControl isRequired>
+              <FormLabel>Pincode</FormLabel>
+              <Input value={formData.pincode} onChange={(e) => setFormData({ ...formData, pincode: e.target.value })} />
             </FormControl>
             <FormControl isRequired>
               <FormLabel>Preferred Date</FormLabel>

@@ -30,6 +30,9 @@ import VendorPaymentsPage from "../pages/VendorPaymentsPage";
 import VendorDetailsPage from "../pages/VendorDetailsPage";
 import VendorListPage from "../pages/VendorListPage";
 import VendorFormModal from "../pages/VendorFormModal";
+import ScheduleCreation from "../pages/ScheduleCreation";
+import ScheduleEditor from "../pages/ScheduleEditor";
+import ClientScheduleLookup from "../pages/ClientScheduleLookup";
 
 export default function AppRoutes() {
   return (
@@ -66,6 +69,11 @@ export default function AppRoutes() {
         <Route path="/admin/service/upload" element={<AdminServiceUpload />} />
 
         <Route path="/admin" element={<AdminHomePage />} />
+        
+
+        <Route path="/schedule/creation" element={<ScheduleCreation />} />
+        <Route path="/schedule/editor/:scheduleId" element={<ScheduleEditor />} />
+        <Route path="/schedule/lookup" element={<ClientScheduleLookup />} />
 
 
 
