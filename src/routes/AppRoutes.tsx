@@ -72,7 +72,8 @@ export default function AppRoutes() {
         
 
         <Route path="/schedule/creation" element={<ScheduleCreation />} />
-        <Route path="/schedule/editor/:scheduleId" element={<ScheduleEditor />} />
+        {/* <Route path="/schedule/editor/:scheduleId" element={<ScheduleEditor />} /> */}
+        <Route path="/schedule/editor" element={<ScheduleEditor />} />
         <Route path="/schedule/lookup" element={<ClientScheduleLookup />} />
 
 

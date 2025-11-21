@@ -15,6 +15,7 @@ import {
   FaChurch,
   FaEdit,
   FaClipboardList,
+  FaCalendarPlus,
 } from "react-icons/fa";
 
 interface TileProps {
@@ -60,6 +61,18 @@ export default function AdminHomePage () {
       description: "View and manage all orders",
       icon: FaClipboardList,
       path: "/admin/dashboard",
+    },
+    {
+      title: "Schedule Creation",
+      description: "Create new service schedules",
+      icon: FaCalendarPlus,
+      path: "/schedule/creation",
+    },
+    {
+      title: "Schedule Editor",
+      description: "Edit and update existing schedules",
+      icon: FaEdit,
+      path: "/schedule/editor",
     },
   ];
 
